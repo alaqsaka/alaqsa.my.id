@@ -33,7 +33,7 @@ wss.on("connection", function connection(ws) {
   wss.broadcast(`Current visitors ${numClients}`);
 
   if (ws.readyState === ws.OPEN) {
-    ws.send(`Current visitors ${numClients}`);
+    ws.send("Welcome to my server! - Aqsa");
   }
 
   db.run(`INSERT INTO visitors (count, time)
